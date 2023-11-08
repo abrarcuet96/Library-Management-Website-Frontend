@@ -9,12 +9,14 @@ import CategoryBooks from "../pages/CategoryBooks/CategoryBooks";
 import BookDetails from "../pages/BookDetails/BookDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Register from "../pages/Register/Register";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 const myCreatedRoutes= createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children:[
             {
                 path: '/',

@@ -53,10 +53,10 @@ const Login = () => {
             })
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-orange-950">
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-3xl font-bold">Please Login</h1>
+                    <h1 className="text-3xl font-bold text-white">Please Login</h1>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body">
@@ -64,16 +64,16 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+                            <input name="email" type="email" placeholder="email" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+                            <input name="password" type="password" placeholder="password" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="border-2 font-semibold text-slate-600 border-slate-600 hover:border-orange-600 hover:text-orange-600 p-2 w-full">Login</button>
                         </div>
                         <div className="text-center flex items-center bg-slate-300 rounded-lg p-2">
                             <p className="mb-2 font-semibold">or, Login with google</p>
