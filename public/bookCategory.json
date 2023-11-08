@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "categoryName": "Mystery",
+      "image": "https://i.ibb.co/vPx4Z8n/best-mystery-books-slideshow-cover-1684970203361.jpg"
+    },
+    {
+      "id": 2,
+      "categoryName": "Fantasy",
+      "image": "https://i.ibb.co/PNBBLzG/8-8-Sci-Fi-Covers-Modern.webp"
+    },
+    {
+      "id": 3,
+      "categoryName": "Science Fiction",
+      "image": "https://i.ibb.co/fndMrbC/61c206ec10b52e0018be27ed.webp"
+    },
+    {
+      "id": 4,
+      "categoryName": "Romance",
+      "image": "https://i.ibb.co/dp8jVMD/best-romance-novels-featured-jpg-optimal.jpg"
+    },
+    {
+      "id": 5,
+      "categoryName": "Thriller",
+      "image": "https://i.ibb.co/2kY9mMz/psychological-thrillers-1635509649.jpg"
+    },
+    {
+      "id": 6,
+      "categoryName": "Non-Fiction",
+      "image": "https://i.ibb.co/NK4nGvs/nonfictionheader.webp"
+    }
+  ]
+  
