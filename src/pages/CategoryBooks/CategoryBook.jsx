@@ -13,7 +13,7 @@ const CategoryBook = ({ book }) => {
                 <p><span className="text-orange-600 font-semibold">Available Quantity:</span> {bookQuantity}</p>
             </div>
             <div className="card-body text-center w-full">
-                <Link to={`bookDetails/${_id}`}><button className="border-2 font-semibold text-slate-900 border-slate-900 hover:border-orange-600 hover:text-orange-600 p-2 w-full">Details</button></Link>
+                <Link to={`/bookDetails/${_id}`}><button className="border-2 font-semibold text-slate-900 border-slate-900 hover:border-orange-600 hover:text-orange-600 p-2 w-full">Details</button></Link>
             </div>
         </div>
     );
