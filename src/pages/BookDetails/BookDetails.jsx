@@ -14,11 +14,17 @@ const BookDetails = () => {
             const findBook= data.find(book=> book._id == id);
             setBook(findBook);
         })
-    },[id])
+    },[id]);
+    const [borrowedItems, setBorrowedItems]= useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:5000/borrowedPageBooks')
+        .then(res=>res.json())
+        .then(data=> setBorrowedItems(data));
+    },[])
     return (
         <div>
             {
-                <DetailsPage key={id} book={book}></DetailsPage>
+                <DetailsPage borrowedItems={borrowedItems} setBook={setBook} setBorrowedItems={setBorrowedItems} key={id} book={book}></DetailsPage>
             }
         </div>
     );

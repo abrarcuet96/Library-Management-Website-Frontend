@@ -2,7 +2,6 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const AddBook = () => {
-    const [file, setFile] = useState("");
     const handleAddBook = e => {
         e.preventDefault();
         const form = e.target;
@@ -13,8 +12,9 @@ const AddBook = () => {
         const authorName = form.authorName.value;
         const categoryName = form.categoryName.value;
         const rating = form.rating.value;
+        const description=form.description.value;
         const myAddedBookDetails = {
-            imageUrl, name, bookQuantity, authorName, categoryName, rating
+            imageUrl, name, bookQuantity, authorName, categoryName, rating, description
         };
         fetch('http://localhost:5000/addedBook', {
             method: 'POST',
@@ -70,7 +70,7 @@ const AddBook = () => {
                                 <label className="label">
                                     <span className="label-text">Book Quantity</span>
                                 </label>
-                                <input type="text" name="bookQuantity" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
+                                <input type="number" name="bookQuantity" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -90,9 +90,15 @@ const AddBook = () => {
                                 <label className="label">
                                     <span className="label-text">Rating</span>
                                 </label>
-                                <input type="text" name="rating" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
+                                <input type="number" name="rating" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
                             </div>
                         </div>
+                        <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Short Description</span>
+                                </label>
+                                <input type="text" name="description" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
+                            </div>
                         <div className="form-control mt-6">
                             <button className="border-2 font-semibold text-slate-600 border-slate-600 hover:border-orange-600 hover:text-orange-600 p-2 w-full" type="submit">Add Books
                             </button>
