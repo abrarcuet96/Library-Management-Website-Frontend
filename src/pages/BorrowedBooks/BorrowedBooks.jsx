@@ -20,7 +20,7 @@ const BorrowedBooks = () => {
     },[])
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto gap-2 p-2">
             {
                 books.map(book=> <BorrowedBook books={books} setBooks={setBooks} book={book} userInfo={userInfo} key={book._id}></BorrowedBook>)
             }

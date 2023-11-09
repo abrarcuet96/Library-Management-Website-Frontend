@@ -9,7 +9,7 @@ const Accordian = () => {
                 How can I borrow books from your library?
                 </div>
                 <div className="collapse-content">
-                    <p>Borrowing books from our library is easy! Simply create an account on our website, search for the book you want to borrow, and click the "Borrow" button. You can enjoy the book for a specified borrowing period, and it will be automatically returned when the due date arrives.</p>
+                    <p>Borrowing books from our library is easy! Simply create an account on our website, search for the book you want to borrow, and click the Borrow button. You can enjoy the book for a specified borrowing period, and it will be automatically returned when the due date arrives.</p>
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200">
@@ -18,7 +18,7 @@ const Accordian = () => {
                 Can I suggest books to be added to your collection?
                 </div>
                 <div className="collapse-content">
-                    <p>Absolutely! We welcome book suggestions from our community. If there's a book you'd like to see in our library, you can use the "Suggest a Book" feature on our website. Our team will review your suggestion and consider adding it to our collection.</p>
+                    <p>Absolutely! We welcome book suggestions from our community. If there is a book you would like to see in our library, you can use the Suggest a Book feature on our website. Our team will review your suggestion and consider adding it to our collection.</p>
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200">
@@ -27,7 +27,7 @@ const Accordian = () => {
                 How do I participate in book discussions and connect with other readers?
                 </div>
                 <div className="collapse-content">
-                    <p>You can engage in book discussions and connect with fellow readers by joining our online book club and forums. Visit the "Community" section on our website to find and join ongoing discussions, share your thoughts on books, and connect with like-minded book enthusiasts. We encourage active participation and the exchange of literary ideas!</p>
+                    <p>You can engage in book discussions and connect with fellow readers by joining our online book club and forums. Visit the community section on our website to find and join ongoing discussions, share your thoughts on books, and connect with like-minded book enthusiasts. We encourage active participation and the exchange of literary ideas!</p>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ const BorrowedBook = ({ book ,userInfo, books, setBooks}) => {
         setUserInfoDetails(info);
     },[name, userInfo]);
     return (
-                <div className="flex gap-5 flex-col lg:flex-row shadow-xl ">
+                <div className="flex gap-5 flex-col lg:flex-row shadow-xl border-2 border-orange-600 p-2">
                     <div className="w-1/2">
                         <img className="rounded-lg w-full" src={imageUrl} alt="" />
                     </div>

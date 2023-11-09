@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { MdOutlineEmojiEvents } from 'react-icons/md';
 import { AuthContext } from "../../providers/AuthProviders";
 
 const RegistrationSection = () => {

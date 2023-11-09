@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import { AuthContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
+import PropTypes from 'prop-types';
 
-
-const DateModal = ({ isOpen, onRequestClose, id, book, setBook, borrowedItems, setBorrowedItems }) => {
+const DateModal = ({ isOpen, onRequestClose, id, book, borrowedItems, setBorrowedItems }) => {
     const { bookQuantity, name } = book;
     const { user } = useContext(AuthContext);
     const { email, displayName } = user;
@@ -147,5 +147,12 @@ const DateModal = ({ isOpen, onRequestClose, id, book, setBook, borrowedItems, s
 
     );
 };
-
+DateModal.propTypes={
+    isOpen: PropTypes.bool,
+    onRequestClose: PropTypes.func,
+    id: PropTypes.string,
+    book: PropTypes.object,
+    borrowedItems: PropTypes.array, 
+    setBorrowedItems: PropTypes.func,
+}
 export default DateModal;
