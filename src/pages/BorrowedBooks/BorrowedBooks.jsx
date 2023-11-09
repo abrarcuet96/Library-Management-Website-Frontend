@@ -12,7 +12,7 @@ const BorrowedBooks = () => {
         fetch(url)
         .then(res=>res.json())
         .then(data=> setBooks(data))
-    },[])
+    },[url])
     useEffect(()=>{
         fetch('http://localhost:5000/userInfo')
         .then(res=>res.json())

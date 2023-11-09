@@ -38,7 +38,7 @@ const myCreatedRoutes= createBrowserRouter([
             },
             {
                 path: '/borrowedBooks',
-                element: <BorrowedBooks></BorrowedBooks>
+                element: <PrivateRoutes><BorrowedBooks></BorrowedBooks></PrivateRoutes>
             },
             {
                 path: '/login',

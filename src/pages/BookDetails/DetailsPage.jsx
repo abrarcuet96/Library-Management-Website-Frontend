@@ -1,7 +1,6 @@
-import Swal from "sweetalert2";
 import HandleBorrow from "../HandleBorrow/HandleBorrow";
 import HandleRead from "../HandleRead/HandleRead";
-
+import PropTypes from 'prop-types';
 const DetailsPage = ({ book, setBook, borrowedItems, setBorrowedItems }) => {
     const { _id, imageUrl, name, bookQuantity, authorName, rating, categoryName, description } = book;
     return (
@@ -33,5 +32,10 @@ const DetailsPage = ({ book, setBook, borrowedItems, setBorrowedItems }) => {
         </div>
     );
 };
-
+DetailsPage.propTypes={
+    book: PropTypes.object,
+    setBook: PropTypes.func,
+    borrowedItems: PropTypes.func,
+    setBorrowedItems:  PropTypes.func
+}
 export default DetailsPage;

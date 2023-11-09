@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 const CategoryBook = ({ book }) => {
     const { _id, imageUrl, name, bookQuantity, authorName, rating, categoryName,description } = book;
     return (
@@ -19,5 +19,7 @@ const CategoryBook = ({ book }) => {
         </div>
     );
 };
-
+CategoryBook.propTypes={
+    book: PropTypes.object
+}
 export default CategoryBook;

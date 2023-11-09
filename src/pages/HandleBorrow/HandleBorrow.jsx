@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import DateModal from '../../components/Modal/DateModal';
-
+import PropTypes from 'prop-types';
 const HandleBorrow = ({bookQuantity, id, setBook, book,borrowedItems, setBorrowedItems}) => {
     const intQuantity= parseInt(bookQuantity);
     const [isModalOpen, setIsModalOpen] =useState(false);
@@ -20,5 +20,12 @@ const HandleBorrow = ({bookQuantity, id, setBook, book,borrowedItems, setBorrowe
         </div>
     );
 };
-
+HandleBorrow.propTypes={
+    bookQuantity: PropTypes.string,
+    id: PropTypes.string,
+    setBook: PropTypes.func,
+    book: PropTypes.object,
+    borrowedItems: PropTypes.array, 
+    setBorrowedItems: PropTypes.func
+}
 export default HandleBorrow;

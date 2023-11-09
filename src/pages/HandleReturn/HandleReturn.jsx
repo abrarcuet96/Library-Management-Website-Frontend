@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-
+import PropTypes from 'prop-types';
 const HandleReturn = ({id, books, setBooks}) => {
+    
     const handleDelete = id => {
         Swal.fire({
             title: 'Are you sure?',
@@ -37,5 +37,9 @@ const HandleReturn = ({id, books, setBooks}) => {
         </div>
     );
 };
-
+HandleReturn.propTypes={
+    id: PropTypes.string,
+    books: PropTypes.array,
+    setBooks: PropTypes.func
+}
 export default HandleReturn;

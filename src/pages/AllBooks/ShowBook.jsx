@@ -1,5 +1,5 @@
 import UpdateBook from "./UpdateBook";
-
+import PropTypes from 'prop-types';
 const ShowBook = ({ book }) => {
     const { _id, imageUrl, name, bookQuantity, authorName, rating, categoryName, description } = book;
     return (
@@ -21,5 +21,7 @@ const ShowBook = ({ book }) => {
         </div>
     );
 };
-
+ShowBook.propTypes={
+    book: PropTypes.object
+}
 export default ShowBook;

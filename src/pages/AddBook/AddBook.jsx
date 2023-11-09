@@ -1,6 +1,4 @@
-
 import Swal from "sweetalert2";
-
 const AddBook = () => {
     const handleAddBook = e => {
         e.preventDefault();

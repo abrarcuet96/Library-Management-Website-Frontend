@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 const UpdateBook = ({id}) => {
     return (
         <div>
@@ -9,5 +9,7 @@ const UpdateBook = ({id}) => {
         </div>
     );
 };
-
+UpdateBook.propTypes={
+    id: PropTypes.string
+}
 export default UpdateBook;

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import HandleReturn from '../HandleReturn/HandleReturn';
-
+import PropTypes from 'prop-types';
 const BorrowedBook = ({ book ,userInfo, books, setBooks}) => {
-    const { _id, imageUrl, name, categoryName } = book;
+    const { _id, imageUrl, name, categoryName, bookQuantity } = book;
     const [userInfoDetails, setUserInfoDetails]= useState({});
     useEffect(()=>{
         const info= userInfo.find(user=> user.bookName == name);
@@ -19,12 +19,17 @@ const BorrowedBook = ({ book ,userInfo, books, setBooks}) => {
                             <p><span className="text-orange-600 font-semibold">Category:</span> {categoryName}</p>
                             <p><span className="text-orange-600 font-semibold">Return Date:</span> {userInfoDetails.returnDate}</p>
                             <p><span className="text-orange-600 font-semibold">Borrowed Date:</span> {userInfoDetails.formattedDate}</p>
-                            <HandleReturn books={books} setBooks={setBooks} id={_id}></HandleReturn>
+                            <HandleReturn books={books} setBooks={setBooks} id={_id} bookQuantity={bookQuantity}></HandleReturn>
                         </div>
                     </div>
                 </div>
             
     );
 };
-
+BorrowedBook.propTypes={
+    book: PropTypes.object,
+    books: PropTypes.array,
+    userInfo: PropTypes.object,
+    setBooks:  PropTypes.func
+}
 export default BorrowedBook;
