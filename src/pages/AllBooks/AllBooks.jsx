@@ -4,12 +4,12 @@ import ShowBook from "./ShowBook";
 const AllBooks = () => {
     const [allBooks, setAllBooks] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/addedBook')
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook')
             .then(res => res.json())
             .then(data => setAllBooks(data));
     }, []);
     const handleFilter=()=>{
-        fetch('http://localhost:5000/addedBook')
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook')
         .then(res=>res.json())
         .then(data=>{
             const filteredData= data.filter(item=> parseInt(item.bookQuantity) > 0);

@@ -5,7 +5,7 @@ import { AuthContext } from "../../providers/AuthProviders";
 const BorrowedBooks = () => {
     const {user}= useContext(AuthContext);
     const {email}= user;
-    const url=`http://localhost:5000/borrowedPageBooks?email=${email}`
+    const url=`https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/borrowedPageBooks?email=${email}`
     const [books, setBooks] = useState([]);
     const [userInfo, setUserInfo]= useState([]);
     useEffect(()=>{
@@ -14,7 +14,7 @@ const BorrowedBooks = () => {
         .then(data=> setBooks(data))
     },[url])
     useEffect(()=>{
-        fetch('http://localhost:5000/userInfo')
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/userInfo')
         .then(res=>res.json())
         .then(data=> setUserInfo(data))
     },[])

@@ -8,7 +8,7 @@ const BookDetails = () => {
     console.log(id);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/addedBook')
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook')
         .then(res=>res.json())
         .then(data=> {
             const findBook= data.find(book=> book._id == id);
@@ -17,7 +17,7 @@ const BookDetails = () => {
     },[id]);
     const [borrowedItems, setBorrowedItems]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/borrowedPageBooks')
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/borrowedPageBooks')
         .then(res=>res.json())
         .then(data=> setBorrowedItems(data));
     },[])

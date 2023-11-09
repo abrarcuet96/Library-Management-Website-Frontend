@@ -34,7 +34,7 @@ const myCreatedRoutes= createBrowserRouter([
             {
                 path: '/updateBookDetails/:id',
                 element: <PrivateRoutes><UpdateBookDetails></UpdateBookDetails></PrivateRoutes>,
-                loader: ({params})=> fetch(`http://localhost:5000/addedBook/${params.id}`)
+                loader: ({params})=> fetch(`https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook/${params.id}`)
             },
             {
                 path: '/borrowedBooks',

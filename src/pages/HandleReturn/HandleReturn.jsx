@@ -13,7 +13,7 @@ const HandleReturn = ({id, books, setBooks}) => {
             confirmButtonText: 'Yes, delete it!'
         }).then(res => {
             if (res.isConfirmed) {
-                fetch(`http://localhost:5000/borrowedPageBooks/${id}`, {
+                fetch(`https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/borrowedPageBooks/${id}`, {
                     method: 'DELETE'
                 }).then(res => res.json())
                     .then(data => {

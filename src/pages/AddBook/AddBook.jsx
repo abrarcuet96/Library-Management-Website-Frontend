@@ -14,7 +14,7 @@ const AddBook = () => {
         const myAddedBookDetails = {
             imageUrl, name, bookQuantity, authorName, categoryName, rating, description
         };
-        fetch('http://localhost:5000/addedBook', {
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

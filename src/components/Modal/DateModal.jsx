@@ -28,7 +28,7 @@ const DateModal = ({ isOpen, onRequestClose, id, book, borrowedItems, setBorrowe
             email, displayName, returnDate, formattedDate, bookName: name
         };
         
-        fetch('http://localhost:5000/userInfo', {
+        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/userInfo', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -63,7 +63,7 @@ const DateModal = ({ isOpen, onRequestClose, id, book, borrowedItems, setBorrowe
                 confirmButtonText: 'Yes, borrow it!'
             }).then(result => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/addedBook/${id}`, {
+                    fetch(`https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook/${id}`, {
                         method: 'PATCH',
                         headers: {
                             'content-type': 'application/json'
@@ -86,7 +86,7 @@ const DateModal = ({ isOpen, onRequestClose, id, book, borrowedItems, setBorrowe
                     const { imageUrl, name, bookQuantity, authorName, rating, categoryName, description } = book;
                     const myBooks = { imageUrl, name, bookQuantity, authorName, rating, categoryName, description, email };
                     console.log(myBooks);
-                    fetch('http://localhost:5000/borrowedPageBooks', {
+                    fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/borrowedPageBooks', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
