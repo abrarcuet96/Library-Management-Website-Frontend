@@ -10,6 +10,7 @@ import BookDetails from "../pages/BookDetails/BookDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import UpdateBookDetails from "../pages/UpdateBookDetails/UpdateBookDetails";
 
 
 const myCreatedRoutes= createBrowserRouter([
@@ -29,6 +30,11 @@ const myCreatedRoutes= createBrowserRouter([
             {
                 path: '/allBooks',
                 element: <PrivateRoutes><AllBooks></AllBooks></PrivateRoutes>
+            },
+            {
+                path: '/updateBookDetails/:id',
+                element: <PrivateRoutes><UpdateBookDetails></UpdateBookDetails></PrivateRoutes>,
+                loader: ({params})=> fetch(`http://localhost:5000/addedBook/${params.id}`)
             },
             {
                 path: '/borrowedBooks',

@@ -63,8 +63,6 @@ const DateModal = ({ isOpen, onRequestClose, id, book, setBook, borrowedItems, s
                 confirmButtonText: 'Yes, borrow it!'
             }).then(result => {
                 if (result.isConfirmed) {
-
-                    console.log(quantity);
                     fetch(`http://localhost:5000/addedBook/${id}`, {
                         method: 'PATCH',
                         headers: {

@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
-const HandleReturn = ({id, books, setBooks, book}) => {
+const HandleReturn = ({id, books, setBooks, availableQuantity}) => {
+    console.log(availableQuantity);
     const handleDelete = id => {
         Swal.fire({
             title: 'Are you sure?',
