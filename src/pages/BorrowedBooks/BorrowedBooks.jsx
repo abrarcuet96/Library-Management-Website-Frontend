@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BorrowedBook from "./BorrowedBook";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const BorrowedBooks = () => {
+    const {user}= useContext(AuthContext);
+    const {email}= user;
+    const url=`http://localhost:5000/borrowedPageBooks?email=${email}`
     const [books, setBooks] = useState([]);
     const [userInfo, setUserInfo]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/borrowedPageBooks')
+        fetch(url)
         .then(res=>res.json())
         .then(data=> setBooks(data))
     },[])

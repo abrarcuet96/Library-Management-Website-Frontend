@@ -84,7 +84,7 @@ const DateModal = ({ isOpen, onRequestClose, id, book, setBook, borrowedItems, s
                             }
                         })
                     const { imageUrl, name, bookQuantity, authorName, rating, categoryName, description } = book;
-                    const myBooks = { imageUrl, name, bookQuantity, authorName, rating, categoryName, description };
+                    const myBooks = { imageUrl, name, bookQuantity, authorName, rating, categoryName, description, email };
                     console.log(myBooks);
                     fetch('http://localhost:5000/borrowedPageBooks', {
                         method: 'POST',
