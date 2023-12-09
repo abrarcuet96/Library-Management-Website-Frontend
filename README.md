@@ -13,4 +13,5 @@ Currently, two official plugins are available:
   <li>Integrated registration directly within the home page, simplifying the process and encouraging new user acquisition.</li>
   <li>Created an FAQ section readily accessible on the home page, anticipating user questions and providing answers readily available, reducing support inquiries.</li>
   <li>Developed an update details page, allowing users to manage and maintain accurate personal information, fostering a sense of control and user empowerment.</li>
+  <li>Used Techs: React, Tailwind, Firebase, Javascript, Vite, MongoDB, NodeJs, ExpressJs</li>
 </ol>
