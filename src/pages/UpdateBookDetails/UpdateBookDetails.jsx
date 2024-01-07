@@ -17,7 +17,7 @@ const UpdateBookDetails = () => {
         const myAddedBookDetails = {
             imageUrl, name, bookQuantity, authorName, categoryName, rating, description
         };
-        fetch(`https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook/${loadedBooks._id}`, {
+        fetch(`https://abrar-library-server-msoqofm1u-abrars-projects-bbcef6d7.vercel.app/addedBook/${loadedBooks._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

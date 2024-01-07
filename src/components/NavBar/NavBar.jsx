@@ -14,7 +14,7 @@ const NavBar = () => {
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-orange-600" : ""
+                    isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                 }
             >
                 Home
@@ -24,7 +24,7 @@ const NavBar = () => {
             <NavLink
                 to="/addBook"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-orange-600" : ""
+                    isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                 }
             >
                 Add Book
@@ -34,7 +34,7 @@ const NavBar = () => {
             <NavLink
                 to="/allBooks"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-orange-600" : ""
+                    isPending ? "pending" : isActive ? "text-fuchsia-600" : ""
                 }
             >
                 All Books
@@ -52,7 +52,7 @@ const NavBar = () => {
         </li>
     </>
     return (
-        <div className="navbar max-w-screen-xl mx-auto my-5">
+        <div className="navbar max-w-screen-xl mx-auto mb-5">
             <div className="navbar-start bg-transparent">
                 <div className="dropdown gap-2">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -80,8 +80,8 @@ const NavBar = () => {
                 {user ?
                     <>
                         <div className="flex flex-row">
-                            <div className="bg-white mr-2 p-1 rounded-lg max-sm:hidden  w-full">
-                                <span className="w-30 h-2 m-2 font-semibold">{user?.displayName}</span>
+                            <div className=" mr-2 p-1 rounded-lg max-sm:hidden  w-full">
+                                <span className="text-fuchsia-600 font-semibold">{user?.displayName}</span>
 
                             </div>
                             <img className="w-8 h-8 mr-2 rounded-full" src={user?.photoURL} alt="" />

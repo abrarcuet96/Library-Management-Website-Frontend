@@ -14,7 +14,7 @@ const AddBook = () => {
         const myAddedBookDetails = {
             imageUrl, name, bookQuantity, authorName, categoryName, rating, description
         };
-        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook', {
+        fetch('https://abrar-library-server-msoqofm1u-abrars-projects-bbcef6d7.vercel.app/addedBook', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -45,9 +45,9 @@ const AddBook = () => {
             })
     }
     return (
-        <div className="hero min-h-screen bg-orange-950">
+        <div className="hero min-h-screen bg-gradient-to-tr from-violet-500 to-orange-300">
             <div>
-                <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100 rounded-md">
+                <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl backdrop-blur-sm bg-white/30 rounded-md">
                     <form onSubmit={handleAddBook} className="card-body">
                         <div className="flex gap-5 flex-col md:flex-row">
                             <div className="form-control">
@@ -98,7 +98,7 @@ const AddBook = () => {
                                 <input type="text" name="description" className="input input-bordered border-2 border-slate-600 rounded-sm" required />
                             </div>
                         <div className="form-control mt-6">
-                            <button className="border-2 font-semibold text-slate-600 border-slate-600 hover:border-orange-600 hover:text-orange-600 p-2 w-full" type="submit">Add Books
+                            <button className="border-2 font-semibold text-slate-600 border-slate-600 hover:border-fuchsia-600 hover:text-fuchsia-600 p-2 w-full" type="submit">Add Books
                             </button>
                         </div>
                     </form>

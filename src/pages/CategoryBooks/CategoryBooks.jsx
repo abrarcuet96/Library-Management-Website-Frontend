@@ -16,7 +16,7 @@ const CategoryBooks = () => {
     }, [id])
 
     useEffect(() => {
-        fetch('https://abrar-library-server-86yxqqchg-abrars-projects-bbcef6d7.vercel.app/addedBook')
+        fetch('https://abrar-library-server-msoqofm1u-abrars-projects-bbcef6d7.vercel.app/addedBook')
             .then(res => res.json())
             .then(data => {
                 const filteredBooks = data.filter(catBook => catBook.categoryName == book.categoryName);
